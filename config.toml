@@ -1,0 +1,158 @@
+# =====================================================================
+#  CONFIGURACION CENTRAL - Sistema Solar Chapin
+#  Guarda el archivo con el programa abierto y se recarga solo
+#  (o presiona R). No hace falta recompilar.
+# =====================================================================
+
+[general]
+semilla = 2026            # semilla de la distribucion procedural (casas, arboles, rocas)
+ventana = [1280, 720]
+fps_max = 144
+velocidad_tiempo = 1.0    # 2.0 = todo orbita/rota el doble de rapido
+escala_objetos = 0.16     # tamano de casas, cafetos, ceibas...
+
+[sol]
+radio = 9.0
+masa = 420.0              # fuerza de su gravedad
+intensidad = 1.0          # brillo del shader del sol y del resplandor
+color_a = [1.0, 0.85, 0.35]
+color_b = [0.95, 0.35, 0.05]
+velocidad_rotacion = 0.03
+
+[nave]
+escala = 0.22
+aceleracion = 14.0
+velocidad_max = 20.0
+multiplicador_turbo = 2.5
+frenado = 2.5
+giro_max = 1.8            # rad/s
+respuesta_giro = 5.0      # que tan rapido llega al giro maximo
+gravedad = 1.0            # 0 = sin atraccion, 2 = el doble
+posicion_inicial = [0.0, 6.0, 80.0]
+alcance_orbita = 3.0      # en radios del planeta
+
+[camara]
+fov = 65.0
+distancia = 1.6
+altura = 0.45
+suavizado = 8.0
+
+[render]
+resolucion = [640, 360]   # resolucion interna del renderizador (se escala a la ventana)
+filtro_suave = false      # false = pixeles nitidos, true = bilineal
+cerca = 0.02
+lejos = 2000.0
+estrellas = 1500
+luz_ambiente = 0.07
+lod_distancias = [3.0, 8.0, 25.0]   # en radios: mas cerca que esto usa mas triangulos
+distancia_objetos = 6.0             # en radios: mas lejos no se dibujan objetos de superficie
+
+# ---------------------------------------------------------------------
+# Planetas. tipo = volcan | ciudad | lago | cafetal | selva
+#   radio, distancia_orbita, velocidad_orbital (rad/s), velocidad_rotacion (rad/s)
+#   deformacion: multiplica el relieve (0 = esfera lisa)
+#   intensidad_shader: fuerza del efecto de cada shader
+#   color_a / color_b / color_c: paleta que usa su shader
+#   semilla: se suma a la semilla general solo para este planeta
+#   objetos: cuantos objetos de superficie intenta colocar
+# ---------------------------------------------------------------------
+
+[[planeta]]
+nombre = "Fuego"
+tipo = "volcan"
+radio = 3.6
+distancia_orbita = 30.0
+velocidad_orbital = 0.045
+velocidad_rotacion = 0.12
+fase = 0.6
+inclinacion_eje = 0.25
+inclinacion_orbita = 0.03
+masa = 18.0
+deformacion = 1.0
+intensidad_shader = 1.0           # brillo de la lava
+color_a = [0.22, 0.19, 0.18]      # roca
+color_b = [0.85, 0.15, 0.02]      # lava roja
+color_c = [1.0, 0.75, 0.15]       # lava amarilla
+atmosfera = [1.0, 0.45, 0.2]
+semilla = 0
+objetos = 45
+
+[[planeta]]
+nombre = "Antigua"
+tipo = "ciudad"
+radio = 5.0
+distancia_orbita = 48.0
+velocidad_orbital = 0.032
+velocidad_rotacion = 0.08
+fase = 2.2
+inclinacion_eje = 0.2
+inclinacion_orbita = -0.02
+masa = 25.0
+deformacion = 1.0
+intensidad_shader = 1.0           # tamano de los adoquines
+color_a = [0.62, 0.56, 0.50]      # piedra
+color_b = [0.30, 0.50, 0.22]      # pasto
+color_c = [0.25, 0.42, 0.20]      # volcan de Agua
+atmosfera = [0.45, 0.65, 1.0]
+semilla = 0
+objetos = 90
+
+[[planeta]]
+nombre = "Atitlan"
+tipo = "lago"
+radio = 5.5
+distancia_orbita = 66.0
+velocidad_orbital = 0.024
+velocidad_rotacion = 0.06
+fase = 4.0
+inclinacion_eje = 0.3
+inclinacion_orbita = 0.04
+masa = 28.0
+deformacion = 1.0
+intensidad_shader = 1.0           # fuerza de las olas
+color_a = [0.15, 0.55, 0.65]      # agua clara
+color_b = [0.03, 0.15, 0.35]      # agua honda
+color_c = [0.30, 0.55, 0.25]      # tierra
+atmosfera = [0.4, 0.7, 1.0]
+semilla = 0
+objetos = 50
+
+[[planeta]]
+nombre = "Cafetal"
+tipo = "cafetal"
+radio = 4.6
+distancia_orbita = 86.0
+velocidad_orbital = 0.018
+velocidad_rotacion = 0.09
+fase = 5.4
+inclinacion_eje = 0.15
+inclinacion_orbita = -0.03
+masa = 22.0
+deformacion = 1.0
+intensidad_shader = 1.0           # densidad de los surcos
+color_a = [0.35, 0.60, 0.22]      # verde
+color_b = [0.12, 0.32, 0.12]      # verde oscuro
+color_c = [0.55, 0.25, 0.15]      # tierra roja
+atmosfera = [0.55, 0.85, 0.7]
+semilla = 0
+objetos = 160
+
+[[planeta]]
+nombre = "Tikal"
+tipo = "selva"
+radio = 6.0
+distancia_orbita = 110.0
+velocidad_orbital = 0.013
+velocidad_rotacion = 0.05
+fase = 1.0
+inclinacion_eje = 0.35
+inclinacion_orbita = 0.02
+masa = 30.0
+deformacion = 1.0
+intensidad_shader = 1.0           # fuerza del mapa de normales
+color_a = [0.08, 0.30, 0.10]      # selva
+color_b = [0.25, 0.55, 0.18]      # copas claras
+color_c = [0.50, 0.40, 0.25]      # claros de tierra
+atmosfera = [0.5, 0.9, 0.6]
+semilla = 0
+objetos = 80
