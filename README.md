@@ -1,5 +1,42 @@
 # Space Travel — Sistema Solar Chapín
 
+## Video
+
+https://github.com/user-attachments/assets/34d561e7-6c52-4695-9ce7-bb79fd45f43e
+
+[▶ Ver el recorrido (video/recorrido.mp4)](video/recorrido.mp4) — 1080p, 58 s: vuelo junto al Sol y Fuego,
+acercamiento a Antigua, modo órbita pasando sobre el Arco, lado nocturno con las ventanas encendidas y alejamiento.
+
+El video se generó con el mismo renderizador del proyecto, cuadro por cuadro a 1920×1080, siguiendo un recorrido
+programado con las mismas entradas que el teclado (acelerar, girar, modo órbita, subir/bajar).
+
+## Controles
+
+| Tecla | Acción |
+|---|---|
+| W / S | acelerar / reversa |
+| A / D | girar (guiñada) |
+| ↑ / ↓ | nariz arriba / abajo — en modo órbita: subir / bajar |
+| Q / E | alabeo |
+| Shift | turbo |
+| Espacio | frenar |
+| F | entrar / salir del **modo órbita** (cuando el HUD dice que está disponible) |
+| C | cambiar cámara (persecución, lejana, cabina) |
+| Clic derecho + ratón | mirar alrededor |
+| 0 – 5 | elegir objetivo (0 = Sol); aparece un marcador en pantalla |
+| F1 | descarte por frustum on/off |
+| F2 | niveles de detalle on/off |
+| G / O / N | gravedad / líneas de órbita / mapa de normales |
+| P | pausar el tiempo |
+| R | recargar `config.toml` (también se recarga solo al guardarlo) |
+| H | ayuda en pantalla · F3 ocultar HUD · F11 pantalla completa |
+
+**Recorrido sugerido (el del video):** salir del punto inicial con turbo hacia Antigua (tecla 2 para marcarla),
+frenar al acercarse, presionar F para entrar en órbita, dar la vuelta al planeta con W y A/D bajando con ↓
+para ver las casas y el arco, subir con ↑, F para salir y alejarse con turbo.
+
+## Descripción
+
 Proyecto final de Gráficas por Computadora (UVG, 2026). Un sistema solar pequeño con temática guatemalteca
 que se explora en una nave con forma de quetzal. Todo el 3D se dibuja con un **renderizador por software
 propio** escrito en Rust: raylib solo se usa para abrir la ventana, leer el teclado y mostrar el framebuffer
@@ -32,31 +69,6 @@ funciona porque el perfil de desarrollo usa `opt-level = 2`.
 setx CARGO_TARGET_DIR "C:\cargo-target"   # una sola vez; luego abrir una terminal nueva
 cargo run --release
 ```
-
-## Controles
-
-| Tecla | Acción |
-|---|---|
-| W / S | acelerar / reversa |
-| A / D | girar (guiñada) |
-| ↑ / ↓ | nariz arriba / abajo — en modo órbita: subir / bajar |
-| Q / E | alabeo |
-| Shift | turbo |
-| Espacio | frenar |
-| F | entrar / salir del **modo órbita** (cuando el HUD dice que está disponible) |
-| C | cambiar cámara (persecución, lejana, cabina) |
-| Clic derecho + ratón | mirar alrededor |
-| 0 – 5 | elegir objetivo (0 = Sol); aparece un marcador en pantalla |
-| F1 | descarte por frustum on/off |
-| F2 | niveles de detalle on/off |
-| G / O / N | gravedad / líneas de órbita / mapa de normales |
-| P | pausar el tiempo |
-| R | recargar `config.toml` (también se recarga solo al guardarlo) |
-| H | ayuda en pantalla · F3 ocultar HUD · F11 pantalla completa |
-
-**Recorrido sugerido (el del video):** salir del punto inicial con turbo hacia Antigua (tecla 2 para marcarla),
-frenar al acercarse, presionar F para entrar en órbita, dar la vuelta al planeta con W y A/D bajando con ↓
-para ver las casas y el arco, subir con ↑, F para salir y alejarse con turbo.
 
 ## Características que solicito evaluar
 
@@ -140,15 +152,3 @@ assets/modelos/  nave.obj, casa.obj, arco.obj, cafeto.obj, ceiba.obj, piramide.o
 - Librerías: `raylib` (ventana/entrada/textura), `rayon` (hilos), `serde` + `toml` (leer la configuración).
 - Ruido de Perlin basado en la versión mejorada de Ken Perlin (2002).
 - Se usó asistencia de IA (Claude) como apoyo durante el desarrollo. El código fue revisado y puedo explicar cada parte.
-
-## Video
-
-
-https://github.com/user-attachments/assets/34d561e7-6c52-4695-9ce7-bb79fd45f43e
-
-
-[▶ Ver el recorrido (video/recorrido.mp4)](video/recorrido.mp4) — 1080p, 58 s: vuelo junto al Sol y Fuego,
-acercamiento a Antigua, modo órbita pasando sobre el Arco, lado nocturno con las ventanas encendidas y alejamiento.
-
-El video se generó con el mismo renderizador del proyecto, cuadro por cuadro a 1920×1080, siguiendo un recorrido
-programado con las mismas entradas que el teclado (acelerar, girar, modo órbita, subir/bajar).
