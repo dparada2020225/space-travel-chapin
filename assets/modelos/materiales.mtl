@@ -1,0 +1,88 @@
+# materiales compartidos
+newmtl verde_quetzal
+Kd 0.060 0.480 0.240
+
+newmtl verde_claro
+Kd 0.300 0.750 0.350
+
+newmtl pecho_rojo
+Kd 0.780 0.120 0.160
+
+newmtl pico
+Kd 0.950 0.780 0.200
+
+newmtl vidrio
+Kd 0.100 0.200 0.450
+
+newmtl pluma
+Kd 0.050 0.550 0.500
+
+newmtl metal
+Kd 0.550 0.570 0.620
+
+newmtl motor
+Kd 0.400 0.900 1.000
+Ke 0.400 0.900 1.000
+
+newmtl pared
+Kd 1.000 1.000 1.000
+
+newmtl zocalo
+Kd 0.350 0.300 0.280
+
+newmtl teja
+Kd 0.700 0.280 0.160
+
+newmtl madera
+Kd 0.350 0.200 0.100
+
+newmtl ventana
+Kd 0.150 0.120 0.100
+Ke 1.000 0.750 0.350
+
+newmtl amarillo_arco
+Kd 0.930 0.720 0.250
+
+newmtl blanco
+Kd 0.950 0.930 0.880
+
+newmtl reloj
+Kd 0.970 0.960 0.900
+
+newmtl hoja
+Kd 0.080 0.360 0.120
+
+newmtl hoja_clara
+Kd 0.160 0.500 0.180
+
+newmtl grano
+Kd 0.800 0.080 0.100
+
+newmtl tronco
+Kd 0.380 0.260 0.170
+
+newmtl corteza
+Kd 0.550 0.520 0.450
+
+newmtl copa
+Kd 0.120 0.450 0.160
+
+newmtl piedra
+Kd 0.620 0.600 0.550
+
+newmtl piedra_oscura
+Kd 0.450 0.440 0.400
+
+newmtl musgo
+Kd 0.300 0.420 0.220
+
+newmtl roca_volcanica
+Kd 0.200 0.180 0.180
+
+newmtl roca_clara
+Kd 0.360 0.320 0.300
+
+newmtl brasa
+Kd 0.900 0.300 0.050
+Ke 0.900 0.300 0.050
+
