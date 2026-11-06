@@ -1,0 +1,19 @@
+[package]
+name = "space_travel"
+version = "0.1.0"
+edition = "2021"
+authors = ["Denil José Parada Cabrera <paradadeniljose@gmail.com>"]
+description = "Sistema solar guatemalteco con un renderizador por software"
+
+[dependencies]
+raylib = "5.5"     # solo ventana, teclado y mostrar el framebuffer
+rayon = "1.10"     # paralelizar el sombreado por filas
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"       # leer config.toml
+
+[profile.dev]
+opt-level = 2
+
+[profile.release]
+opt-level = 3
+lto = "thin"
