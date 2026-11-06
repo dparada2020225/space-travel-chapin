@@ -25,6 +25,14 @@ cargo run --release
 Se debe correr desde la carpeta del proyecto (ahí están `config.toml` y `assets/`). Sin `--release` también
 funciona porque el perfil de desarrollo usa `opt-level = 2`.
 
+**Windows:** si la carpeta del proyecto tiene una ruta larga, la compilación de raylib (CMake + MSBuild) falla con
+*"supera el límite máximo para la ruta de acceso"*. Se arregla usando una carpeta de compilación corta:
+
+```powershell
+setx CARGO_TARGET_DIR "C:\cargo-target"   # una sola vez; luego abrir una terminal nueva
+cargo run --release
+```
+
 ## Controles
 
 | Tecla | Acción |
