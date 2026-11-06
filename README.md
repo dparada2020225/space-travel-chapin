@@ -143,6 +143,10 @@ assets/modelos/  nave.obj, casa.obj, arco.obj, cafeto.obj, ceiba.obj, piramide.o
 
 ## Video
 
+
+https://github.com/user-attachments/assets/34d561e7-6c52-4695-9ce7-bb79fd45f43e
+
+
 [▶ Ver el recorrido (video/recorrido.mp4)](video/recorrido.mp4) — 1080p, 58 s: vuelo junto al Sol y Fuego,
 acercamiento a Antigua, modo órbita pasando sobre el Arco, lado nocturno con las ventanas encendidas y alejamiento.
 
