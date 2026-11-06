@@ -3,6 +3,8 @@
 pub mod config;
 pub mod malla;
 pub mod math;
+pub mod modelos;
+pub mod planeta;
 pub mod raster;
 pub mod ruido;
 pub mod shaders;
