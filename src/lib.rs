@@ -4,3 +4,4 @@ pub mod malla;
 pub mod math;
 pub mod raster;
 pub mod ruido;
+pub mod shaders;
